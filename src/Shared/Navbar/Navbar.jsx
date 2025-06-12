@@ -1,8 +1,18 @@
-
+import { NavLink } from 'react-router-dom';
+import logo from '../../assets/images/icons8-education-48.png'
 
 const Navbar = () => {
+    const links = <>
+    
+    <li>
+        <NavLink to={'/'}><a>Home</a></NavLink>
+    </li>
+    <li>
+        <NavLink to={'/courses'}><a>Courses</a></NavLink>
+    </li>
+    </>
     return (
-        <div className="navbar bg-base-100 shadow-sm px-12 w-10/12 mx-auto rounded-3xl">
+        <div className="navbar bg-base-100 shadow-sm md:px-12 md:w-10/12 mx-auto rounded-3xl">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -11,34 +21,17 @@ const Navbar = () => {
                     <ul
                         tabIndex={0}
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                        <li><a>Item 1</a></li>
-                        <li>
-                            <a>Parent</a>
-                            <ul className="p-2">
-                                <li><a>Submenu 1</a></li>
-                                <li><a>Submenu 2</a></li>
-                            </ul>
-                        </li>
-                        <li><a>Item 3</a></li>
+                        {links}
+                        
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">
-                    {/* <img src="../../assets/icons8-books-48.png" className="w-11" alt="" /> */}
+                <a className="btn btn-ghost text-lg md:text-xl">
+                    <img src= {logo} className="w-11" alt="" />
                     EduVerse Academy</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                    <li><a>Item 1</a></li>
-                    <li>
-                        <details>
-                            <summary>Parent</summary>
-                            <ul className="p-2">
-                                <li><a>Submenu 1</a></li>
-                                <li><a>Submenu 2</a></li>
-                            </ul>
-                        </details>
-                    </li>
-                    <li><a>Item 3</a></li>
+                    {links}
                 </ul>
             </div>
             <div className="navbar-end">
@@ -53,13 +46,8 @@ const Navbar = () => {
                     <ul
                         tabIndex={0}
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                        <li>
-                            <a className="justify-between">
-                                Profile
-                                <span className="badge">New</span>
-                            </a>
-                        </li>
-                        <li><a>Settings</a></li>
+                        
+                        <li><a>Dashboard</a></li>
                         <li><a>Logout</a></li>
                     </ul>
                 </div>

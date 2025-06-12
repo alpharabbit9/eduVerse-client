@@ -1,0 +1,152 @@
+[
+  {
+    "title": "Mastering Python: From Zero to Hero",
+    "name": "Alice Johnson",
+    "image": "https://i.ibb.co/DHcwKK5S/p.jpg",
+    "price": 49.99,
+    "category": "Programming",
+    "short_description": "A complete guide to Python programming for beginners.",
+    "total_enrolment": 1200,
+    "enroll": "/enroll/python-master"
+  },
+  {
+    "title": "Advanced JavaScript Techniques",
+    "name": "Bob Smith",
+    "image": "https://i.ibb.co/cSkFp5Fy/images.jpg",
+    "price": 59.99,
+    "category": "Web Development",
+    "short_description": "Deep dive into ES6+, async patterns, and advanced JS concepts.",
+    "total_enrolment": 850,
+    "enroll": "/enroll/js-advanced"
+  },
+  {
+    "title": "Digital Marketing Fundamentals",
+    "name": "Carol Lee",
+    "image": "https://i.ibb.co/LXtTjvK3/what-is-digital-marketing.png",
+    "price": 39.99,
+    "category": "Marketing",
+    "short_description": "Learn SEO, SEM, content strategy, and social media marketing.",
+    "total_enrolment": 2000,
+    "enroll": "/enroll/digital-marketing"
+  },
+  {
+    "title": "UI/UX Design Bootcamp",
+    "name": "David Kim",
+    "image": "https://i.ibb.co/mrhN3yxc/images.png",
+    "price": 79.99,
+    "category": "Design",
+    "short_description": "Hands-on course in user interface and user experience design.",
+    "total_enrolment": 950,
+    "enroll": "/enroll/ui-ux-bootcamp"
+  },
+  {
+    "title": "Data Science with R",
+    "name": "Eva Martinez",
+    "image": "https://i.ibb.co/cSkFp5Fy/images.jpg",
+    "price": 69.99,
+    "category": "Data Science",
+    "short_description": "Explore data analysis, visualization, and modeling using R.",
+    "total_enrolment": 1100,
+    "enroll": "/enroll/data-science-r"
+  },
+  {
+    "title": "Mastering Photoshop CC",
+    "name": "Frank Liu",
+    "image": "https://i.ibb.co/zTWTSFsH/images-1.jpg",
+    "price": 54.99,
+    "category": "Graphic Design",
+    "short_description": "Learn all Photoshop tools and techniques from scratch.",
+    "total_enrolment": 1300,
+    "enroll": "/enroll/photoshop-cc"
+  },
+  {
+    "title": "iOS App Development with Swift",
+    "name": "Grace Wilson",
+    "image": "https://i.ibb.co/8h0mKZb/app-development-banner-33099-1720.jpg",
+    "price": 89.99,
+    "category": "Mobile Development",
+    "short_description": "Build real iOS apps using Swift and Xcode.",
+    "total_enrolment": 780,
+    "enroll": "/enroll/ios-swift"
+  },
+  {
+    "title": "Introduction to Blockchain",
+    "name": "Henry Zhao",
+    "image": "https://i.ibb.co/wFtHn7qX/images-2.jpg",
+    "price": 29.99,
+    "category": "Blockchain",
+    "short_description": "Understand the fundamentals of blockchain technology.",
+    "total_enrolment": 670,
+    "enroll": "/enroll/blockchain-intro"
+  },
+  {
+    "title": "Project Management Essentials",
+    "name": "Isabel Garcia",
+    "image": "https://i.ibb.co/LXtTjvK3/what-is-digital-marketing.png",
+    "price": 44.99,
+    "category": "Business",
+    "short_description": "Master the key principles of project management.",
+    "total_enrolment": 1450,
+    "enroll": "/enroll/pm-essentials"
+  },
+  {
+    "title": "Photography for Beginners",
+    "name": "Jack Novak",
+    "image": "https://i.ibb.co/zTWTSFsH/images-1.jpg",
+    "price": 34.99,
+    "category": "Photography",
+    "short_description": "Get started with DSLR and smartphone photography basics.",
+    "total_enrolment": 1600,
+    "enroll": "/enroll/photography-basics"
+  },
+  {
+    "title": "Spanish Language Crash Course",
+    "name": "Laura Fernandez",
+    "image": "https://i.ibb.co/ZzHyPXyb/spanish.png",
+    "price": 24.99,
+    "category": "Language",
+    "short_description": "Start speaking Spanish fast with this intensive course.",
+    "total_enrolment": 2100,
+    "enroll": "/enroll/spanish-crash"
+  },
+  {
+    "title": "Personal Finance 101",
+    "name": "Mark Thomas",
+    "image": "https://i.ibb.co/cSkFp5Fy/images.jpg",
+    "price": 19.99,
+    "category": "Finance",
+    "short_description": "Learn budgeting, saving, investing, and financial planning.",
+    "total_enrolment": 1950,
+    "enroll": "/enroll/personal-finance"
+  },
+  {
+    "title": "Creative Writing Workshop",
+    "name": "Nina Patel",
+    "image": "https://i.ibb.co/jk48syp3/Web-Development-Image.jpg",
+    "price": 39.99,
+    "category": "Writing",
+    "short_description": "Enhance your storytelling, plotting, and character skills.",
+    "total_enrolment": 820,
+    "enroll": "/enroll/creative-writing"
+  },
+  {
+    "title": "Yoga & Mindfulness for Beginners",
+    "name": "Olivia Lee",
+    "image": "https://i.ibb.co/ccZQsTMP/y.jpg",
+    "price": 29.99,
+    "category": "Wellness",
+    "short_description": "Start your journey into yoga and mindful living.",
+    "total_enrolment": 1430,
+    "enroll": "/enroll/yoga-mindfulness"
+  },
+  {
+    "title": "Excel Expert: Pivot Tables & Charts",
+    "name": "Paul Nguyen",
+    "image": "https://i.ibb.co/jk48syp3/Web-Development-Image.jpg",
+    "price": 49.99,
+    "category": "Productivity",
+    "short_description": "Master Excel pivot tables, charts, and data analysis.",
+    "total_enrolment": 1580,
+    "enroll": "/enroll/excel-expert"
+  }
+]
