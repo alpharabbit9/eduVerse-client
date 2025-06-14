@@ -1,4 +1,5 @@
 
+import { Link } from 'react-router-dom';
 import img from '../../../assets/images/boy-studying-university-library.jpg'
 
 const Banner = () => {
@@ -18,7 +19,7 @@ const Banner = () => {
             <h1 className="text-white text-3xl md:text-5xl font-bold  mb-3">Learn on your schedule</h1>
             <p className="text-white mb-3">Discover thousands of online courses from top universities around world.</p>
             <p className="text-white mb-3">anywhere  , anytime enjoy and learn risk free with 30 days money back guarantee</p>
-            <button className='btn bg-blue-500 text-white px-6 mt-6 mr-4'>Sign UP</button>
+           <Link to={'/login'}> <button className='btn bg-blue-500 text-white px-6 mt-6 mr-4'>Sign UP</button></Link>
             <button className='btn btn-outline text-white px-6 mt-6'>How it works</button>
         </div>
         
