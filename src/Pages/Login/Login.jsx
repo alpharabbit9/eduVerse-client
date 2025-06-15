@@ -3,6 +3,7 @@ import loginImg from '../../assets/images/Login/Data_security_01.jpg'
 import { useContext } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider/AuthProvider';
 import Swal from 'sweetalert2';
+import GoogleLogIn from '../../Components/Social Login/GoogleLogIn';
 
 const Login = () => {
 
@@ -56,6 +57,8 @@ const Login = () => {
                             <div><a className="link link-hover">Forgot password?</a></div>
                             <p>New here ? <Link className='text-blue-700' to={'/register'}>Create an account</Link></p>
                             <button className="btn btn-neutral mt-4">Login</button>
+                            <div className="divider">or</div>
+                            <GoogleLogIn></GoogleLogIn>
                         </fieldset>
                     </form>
                 </div>

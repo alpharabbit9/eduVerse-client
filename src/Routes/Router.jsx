@@ -8,6 +8,7 @@ import Login from "../Pages/Login/Login";
 import Dashboard from "../Pages/Dashboard/Dashboard";
 import AdminProfiile from "../Pages/Dashboard/Admin/Admin Profile/AdminProfiile";
 import AllUsers from "../Pages/Dashboard/Admin/All Users/AllUsers";
+import TeacherForm from "../Pages/Home/BeTeacher.jsx/Teacher Form/TeacherForm";
 
 
 const Router = createBrowserRouter(
@@ -27,6 +28,10 @@ const Router = createBrowserRouter(
                 {
                     path: 'courses/:id',
                     element: <CourseDetails></CourseDetails>
+                },
+                {
+                    path:'/teacherForm',
+                    element:<TeacherForm></TeacherForm>
                 }
             ]
         },

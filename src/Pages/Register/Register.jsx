@@ -4,6 +4,7 @@ import { AuthContext } from '../../Provider/AuthProvider/AuthProvider';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import axios from 'axios';
+import GoogleLogIn from '../../Components/Social Login/GoogleLogIn';
 
 const Register = () => {
 
@@ -85,6 +86,8 @@ const Register = () => {
                             <input name='password' type="password" className="input" placeholder="Password" />
                             <div><a className="link link-hover">Forgot password?</a></div>
                             <button className="btn btn-neutral mt-4">Login</button>
+                            <div className="divider">or</div>
+                            <GoogleLogIn></GoogleLogIn>
                         </fieldset>
                     </form>
                 </div>

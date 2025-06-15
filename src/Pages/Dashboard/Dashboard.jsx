@@ -5,7 +5,10 @@ import { Link, NavLink, Outlet } from "react-router-dom";
 
 
 const Dashboard = () => {
+
     const { user } = useContext(AuthContext)
+
+    
     return (
         <div className="drawer lg:drawer-open">
             <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
@@ -53,11 +56,18 @@ const Dashboard = () => {
                         Manage Users
                     </NavLink>
 
+
                     <div className="divider"></div>
 
 
                     <Link to={'/'} className="btn bg-white w-full rounded-3xl mb-3">
-                    Home
+                        Home
+                    </Link>
+                    <Link to={'/'} className="btn bg-white w-full rounded-3xl mb-3">
+                        About
+                    </Link>
+                    <Link to={'/'} className="btn bg-white w-full rounded-3xl mb-3">
+                        Contact
                     </Link>
 
                 </ul>
