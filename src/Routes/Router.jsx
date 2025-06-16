@@ -9,6 +9,7 @@ import Dashboard from "../Pages/Dashboard/Dashboard";
 import AdminProfiile from "../Pages/Dashboard/Admin/Admin Profile/AdminProfiile";
 import AllUsers from "../Pages/Dashboard/Admin/All Users/AllUsers";
 import TeacherForm from "../Pages/Home/BeTeacher.jsx/Teacher Form/TeacherForm";
+import TeacherReq from "../Pages/Dashboard/Admin/Teacher Request/TeacherReq";
 
 
 const Router = createBrowserRouter(
@@ -54,6 +55,10 @@ const Router = createBrowserRouter(
                 {
                     path:'/dashboard/allUsers',
                     element:<AllUsers></AllUsers>
+                },
+                {
+                    path:'/dashboard/teacherReq',
+                    element:<TeacherReq></TeacherReq>
                 }
             ]
         }

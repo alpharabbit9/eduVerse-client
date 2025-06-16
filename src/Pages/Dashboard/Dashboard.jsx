@@ -55,6 +55,16 @@ const Dashboard = () => {
                     >
                         Manage Users
                     </NavLink>
+                    <NavLink
+                        to="/dashboard/teacherReq"
+                        className={({ isActive }) =>
+                            isActive
+                                ? "btn bg-black text-white w-full rounded-3xl mb-3"
+                                : "btn bg-white text-black w-full rounded-3xl mb-3"
+                        }
+                    >
+                        Teacher Requests
+                    </NavLink>
 
 
                     <div className="divider"></div>
