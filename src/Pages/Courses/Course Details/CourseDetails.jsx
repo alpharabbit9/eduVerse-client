@@ -11,7 +11,7 @@ const CourseDetails = () => {
     // console.log(id)
 
     const [course, setCourse] = useState([]);
-    const { name, title, image, price, category, short_description, total_enrolment } = course
+    const { name, title, image, price, category, description, total_enrolment } = course
 
 
     useEffect(() => {
@@ -40,7 +40,7 @@ const CourseDetails = () => {
 
                     <h2 className='text-2xl md:text-4xl font-bold'>{title}</h2>
                     <h3 className='text-2xl md:text-4xl mt-3'>Earn a University of London degree in Computer Science</h3>
-                    <p className='text-gray-600 mt-3'>{short_description}</p>
+                    <p className='text-gray-600 mt-3'>{description}</p>
 
                     <div className='grid grid-cols-2 md:grid-cols-3 mt-6'>
                         <div className='flex items-center gap-2'>

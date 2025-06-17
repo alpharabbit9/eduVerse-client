@@ -1,12 +1,16 @@
 import { useQuery } from '@tanstack/react-query';
-import React from 'react';
+import React, { useContext } from 'react';
 import UseAxiosSecure from '../../../../Hooks/Axios Secure/UseAxiosSecure';
+import Swal from 'sweetalert2';
+import { AuthContext } from '../../../../Provider/AuthProvider/AuthProvider';
 
 const TeacherReq = () => {
 
+
+    // const {user} = useContext(AuthContext)
     const axiosSecure = UseAxiosSecure()
 
-    const { data: requests = [] } = useQuery({
+    const { data: requests = [], refetch } = useQuery({
         queryKey: ['requests'],
         queryFn: async () => {
 
@@ -15,6 +19,85 @@ const TeacherReq = () => {
 
         }
     })
+
+    const HandleAccept = (reqId, reqEmail) => {
+
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, make Teacher!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+
+                axiosSecure.patch(`/users/teacher/${reqEmail}`)
+                    .then(res => {
+
+                        console.log(res.data)
+
+                        axiosSecure.patch(`/teacherRequest/${reqId}`)
+                            .then(result => {
+
+                                if (result.data.modifiedCount > 0) {
+
+                                    Swal.fire({
+                                        title: "Updated!",
+                                        text: "Role Updated to Teacher",
+                                        icon: "success"
+                                    });
+
+                                    refetch()
+
+                                }
+                            })
+                    })
+
+
+
+
+
+            }
+        });
+
+
+    }
+
+    const handleReject = (id, reqEmail) => {
+
+        Swal.fire({
+            title: "Are you sure to reject?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, reject!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+
+                axiosSecure.patch(`/users/reject/${reqEmail}`)
+                    .then(result => {
+                        axiosSecure.patch(`/teacherRequest/reject/${id}`)
+                            .then(res => {
+                                if (res.data.modifiedCount > 0) {
+                                    Swal.fire({
+                                        title: "Rejected!",
+                                        text: "Request Rejected.",
+                                        icon: "success"
+                                    });
+                                }
+                            })
+                    })
+
+                    refetch()
+
+            }
+        });
+
+    }
     return (
         <div>
             <h1 className="text-3xl font-bold mb-6">Teacher Requests</h1>
@@ -69,7 +152,7 @@ const TeacherReq = () => {
                                     </td>
                                     <td>
                                         <p
-                                            className={`btn rounded-3xl text-white ${request?.status === 'approved' ? 'bg-blue-500' : 'bg-orange-500'
+                                            className={`btn rounded-3xl text-white ${request?.status === 'Approved' ? 'bg-blue-500' : 'bg-orange-500'
                                                 }`}
                                         >
                                             {request?.status}
@@ -77,11 +160,17 @@ const TeacherReq = () => {
 
                                     </td>
                                     <td>
-                                        <button className="btn  bg-green-500 text-white rounded-3xl ">Accept</button>
+                                        <button
+                                            disabled={request.status === 'Approved' || request.status === "Rejected"}
+                                            onClick={() => HandleAccept(request._id, request.teacher_email)}
+                                            className="btn bg-green-500 text-white rounded-3xl"
+                                        >
+                                            Accept
+                                        </button>
 
                                     </td>
                                     <td>
-                                        <button className="btn  bg-red-600 text-white rounded-3xl ">Reject</button>
+                                        <button disabled = { request.status === "Rejected" } onClick={() => handleReject(request._id, request.teacher_email)} className="btn  bg-red-600 text-white rounded-3xl ">Reject</button>
 
                                     </td>
 

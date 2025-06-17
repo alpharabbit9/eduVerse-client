@@ -10,6 +10,7 @@ import AdminProfiile from "../Pages/Dashboard/Admin/Admin Profile/AdminProfiile"
 import AllUsers from "../Pages/Dashboard/Admin/All Users/AllUsers";
 import TeacherForm from "../Pages/Home/BeTeacher.jsx/Teacher Form/TeacherForm";
 import TeacherReq from "../Pages/Dashboard/Admin/Teacher Request/TeacherReq";
+import AddClass from "../Pages/Dashboard/Teacher/Add Class/AddClass";
 
 
 const Router = createBrowserRouter(
@@ -48,6 +49,7 @@ const Router = createBrowserRouter(
             path: 'dashboard',
             element:<Dashboard></Dashboard>,
             children:[
+                // Admin Routes
                 {
                     path:'/dashboard/adminProfile',
                     element:<AdminProfiile></AdminProfiile>
@@ -59,6 +61,14 @@ const Router = createBrowserRouter(
                 {
                     path:'/dashboard/teacherReq',
                     element:<TeacherReq></TeacherReq>
+                },
+
+                // Teacher Routes
+                {
+
+                    path:'/dashboard/addClass',
+                    element:<AddClass></AddClass>
+
                 }
             ]
         }

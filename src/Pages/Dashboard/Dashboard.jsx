@@ -1,12 +1,14 @@
-import { useContext } from "react";
+
 import { FaStackExchange } from "react-icons/fa";
 import { AuthContext } from "../../Provider/AuthProvider/AuthProvider";
-import { Link, NavLink, Outlet } from "react-router-dom";
+import { data, Link, NavLink, Outlet } from "react-router-dom";
+import { useContext } from "react";
 
 
 const Dashboard = () => {
 
     const { user } = useContext(AuthContext)
+   
 
     
     return (
@@ -34,6 +36,9 @@ const Dashboard = () => {
                     </div>
 
                     <div className="divider"></div>
+
+                    {/* Admin  Routes */}
+
                     <NavLink
                         to="/dashboard/adminProfile"
                         className={({ isActive }) =>
@@ -55,6 +60,8 @@ const Dashboard = () => {
                     >
                         Manage Users
                     </NavLink>
+
+                    {/* Teacher Routes */}
                     <NavLink
                         to="/dashboard/teacherReq"
                         className={({ isActive }) =>
@@ -64,6 +71,16 @@ const Dashboard = () => {
                         }
                     >
                         Teacher Requests
+                    </NavLink>
+                    <NavLink
+                        to="/dashboard/addClass"
+                        className={({ isActive }) =>
+                            isActive
+                                ? "btn bg-black text-white w-full rounded-3xl mb-3"
+                                : "btn bg-white text-black w-full rounded-3xl mb-3"
+                        }
+                    >
+                        Add Course
                     </NavLink>
 
 

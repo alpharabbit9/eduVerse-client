@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 
 const Card = ({ course }) => {
-    const { _id, title, image, price, category, short_description, total_enrolment } = course
+    const { _id, title, image, price, category, description, total_enrolment } = course
     return (
         <Link to={`/courses/${_id}`}>
             <div className="card bg-base-100 w-96 shadow-sm mt-3 mb-3 transform transition duration-300 hover:scale-105">
@@ -16,7 +16,7 @@ const Card = ({ course }) => {
                 <div className="card-body">
                     <p className='text-blue-500'>{category}</p>
                     <h2 className="card-title font-bold">{title}</h2>
-                    <p className="text-gray-600">{short_description}</p>
+                    <p className="text-gray-600">{description}</p>
                     <div className="divider"></div>
                     <div className="flex items-center gap-2 text-gray-600">
                         <FaUser></FaUser>
