@@ -18,10 +18,7 @@ const Card = ({ course }) => {
                     <h2 className="card-title font-bold">{title}</h2>
                     <p className="text-gray-600">{description}</p>
                     <div className="divider"></div>
-                    <div className="flex items-center gap-2 text-gray-600">
-                        <FaUser></FaUser>
-                        <p>{total_enrolment} Students</p>
-                    </div>
+                    
                     <div className="">
                         <div className='flex justify-between items-center'>
                             <p className='text-xl text-blue-500'>${price}</p>

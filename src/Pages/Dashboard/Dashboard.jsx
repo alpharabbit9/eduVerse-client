@@ -49,6 +49,16 @@ const Dashboard = () => {
                     >
                         My Profile
                     </NavLink>
+                    <NavLink
+                        to="/dashboard/allCourse"
+                        className={({ isActive }) =>
+                            isActive
+                                ? "btn bg-black text-white w-full rounded-3xl mb-3"
+                                : "btn bg-white text-black w-full rounded-3xl mb-3"
+                        }
+                    >
+                        All Course
+                    </NavLink>
 
                     <NavLink
                         to="/dashboard/allUsers"
@@ -81,6 +91,16 @@ const Dashboard = () => {
                         }
                     >
                         Add Course
+                    </NavLink>
+                    <NavLink
+                        to="/dashboard/teacherClass"
+                        className={({ isActive }) =>
+                            isActive
+                                ? "btn bg-black text-white w-full rounded-3xl mb-3"
+                                : "btn bg-white text-black w-full rounded-3xl mb-3"
+                        }
+                    >
+                        Teacher Class
                     </NavLink>
 
 

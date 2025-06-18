@@ -11,6 +11,8 @@ import AllUsers from "../Pages/Dashboard/Admin/All Users/AllUsers";
 import TeacherForm from "../Pages/Home/BeTeacher.jsx/Teacher Form/TeacherForm";
 import TeacherReq from "../Pages/Dashboard/Admin/Teacher Request/TeacherReq";
 import AddClass from "../Pages/Dashboard/Teacher/Add Class/AddClass";
+import AllClass from "../Pages/Dashboard/Admin/All Classes/AllClass";
+import MyTeacherClass from "../Pages/Dashboard/Teacher/My Class/myTeacherClass";
 
 
 const Router = createBrowserRouter(
@@ -62,12 +64,22 @@ const Router = createBrowserRouter(
                     path:'/dashboard/teacherReq',
                     element:<TeacherReq></TeacherReq>
                 },
+                {
+                    path:'/dashboard/allCourse',
+                    element:<AllClass></AllClass>
+                },
 
                 // Teacher Routes
                 {
 
                     path:'/dashboard/addClass',
                     element:<AddClass></AddClass>
+
+                },
+                {
+
+                    path:'/dashboard/teacherClass',
+                    element:<MyTeacherClass></MyTeacherClass>
 
                 }
             ]
