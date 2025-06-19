@@ -2,9 +2,10 @@ import { useContext } from "react";
 import { FaBookmark, FaEdit, FaTrashAlt } from "react-icons/fa";
 import { AuthContext } from "../../../../Provider/AuthProvider/AuthProvider";
 import UseAxiosSecure from "../../../../Hooks/Axios Secure/UseAxiosSecure";
+import Swal from "sweetalert2";
 
 
-const TeacherCard = ({ course , reload }) => {
+const TeacherCard = ({ course, refetch }) => {
 
     const { user } = useContext(AuthContext)
 
@@ -12,7 +13,7 @@ const TeacherCard = ({ course , reload }) => {
 
     const { _id, title, image, price, description, status } = course
 
-    const HandleSubmit = (e , id) => {
+    const HandleSubmit = (e, id) => {
         e.preventDefault()
 
 
@@ -20,7 +21,7 @@ const TeacherCard = ({ course , reload }) => {
         const title = form.title.value;
         const image = form.image.value;
         const description = form.description.value;
-        const price = form.price.value ;
+        const price = form.price.value;
 
 
         const updateDoc = {
@@ -31,11 +32,45 @@ const TeacherCard = ({ course , reload }) => {
             price
         }
 
-        axiosSecure.put(`/courses/${id}`,updateDoc)
-        .then(res => {
-            console.log(res.data)
-          
-        })
+        axiosSecure.put(`/courses/${id}`, updateDoc)
+            .then(res => {
+                console.log(res.data)
+
+            })
+    }
+
+
+    const HandleDelete = (id) => {
+
+
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+
+                axiosSecure.delete(`/course/delete/${id}`)
+                    .then(res => {
+                        console.log(res.data)
+                        if (res.data.deletedCount > 0) {
+                            Swal.fire({
+                                title: "Deleted!",
+                                text: "Your file has been deleted.",
+                                icon: "success"
+                            });
+
+                            refetch()
+                        }
+                    })
+
+            }
+        });
+
     }
 
     return (
@@ -63,21 +98,21 @@ const TeacherCard = ({ course , reload }) => {
                         </button>
                         <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
                             <div className="modal-box">
-                                <form onSubmit={() =>HandleSubmit(_id)} className="card-body">
+                                <form onSubmit={() => HandleSubmit(_id)} className="card-body">
                                     <fieldset className="fieldset">
                                         <label className="label">Course Title</label>
-                                        <input  defaultValue={title} name='title' type="text" className="input" placeholder="Name" />
+                                        <input defaultValue={title} name='title' type="text" className="input" placeholder="Name" />
                                         <label className="label">Image</label>
-                                        <input  defaultValue={image} name='image' type="text" className="input" placeholder="" />
+                                        <input defaultValue={image} name='image' type="text" className="input" placeholder="" />
                                         <label className="label">description</label>
-                                        <input  defaultValue={description} name='description' type="text" className="input" placeholder="Name" />
+                                        <input defaultValue={description} name='description' type="text" className="input" placeholder="Name" />
                                         <label className="label">Price</label>
-                                        <input  defaultValue={price} name='price' type="text" className="input" placeholder="Name" />
-                                        
-                                       
+                                        <input defaultValue={price} name='price' type="text" className="input" placeholder="Name" />
 
-                                       
-                                        
+
+
+
+
 
 
                                         <button className="btn btn-neutral mt-4">
@@ -93,7 +128,7 @@ const TeacherCard = ({ course , reload }) => {
                                 </div>
                             </div>
                         </dialog>
-                        <button className="btn bg-red-600 text-white ">
+                        <button onClick={() => HandleDelete(_id)} className="btn bg-red-600 text-white ">
                             <FaTrashAlt></FaTrashAlt>
                             Delete
                         </button>

@@ -37,7 +37,7 @@ const MyTeacherClass = () => {
             <div className='w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4 md:mt-16'>
 
                 {
-                    courses.map(course => <TeacherCard course={course} key={course._id} reload ={refetch}></TeacherCard>)
+                    courses.map(course => <TeacherCard course={course} key={course._id} refetch ={refetch}></TeacherCard>)
                 }
                 
 

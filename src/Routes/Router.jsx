@@ -6,13 +6,18 @@ import CourseDetails from "../Pages/Courses/Course Details/CourseDetails";
 import Register from "../Pages/Register/Register";
 import Login from "../Pages/Login/Login";
 import Dashboard from "../Pages/Dashboard/Dashboard";
-import AdminProfiile from "../Pages/Dashboard/Admin/Admin Profile/AdminProfiile";
+import AdminProfiile from "../Pages/Dashboard/Profile/Profiile";
 import AllUsers from "../Pages/Dashboard/Admin/All Users/AllUsers";
 import TeacherForm from "../Pages/Home/BeTeacher.jsx/Teacher Form/TeacherForm";
 import TeacherReq from "../Pages/Dashboard/Admin/Teacher Request/TeacherReq";
 import AddClass from "../Pages/Dashboard/Teacher/Add Class/AddClass";
 import AllClass from "../Pages/Dashboard/Admin/All Classes/AllClass";
 import MyTeacherClass from "../Pages/Dashboard/Teacher/My Class/myTeacherClass";
+import ResultFetcher from "../Components/ResultFetcher";
+import PaymentForm from "../Payment/PaymentForm";
+import EnrollCourse from "../Pages/Dashboard/Student/My Enroll Class/EnrollCourse";
+import EnrollDetails from "../Pages/Dashboard/Student/Enorll Class  Details/EnrollDetails";
+import Profile from "../Pages/Dashboard/Profile/Profiile";
 
 
 const Router = createBrowserRouter(
@@ -34,6 +39,10 @@ const Router = createBrowserRouter(
                     element: <CourseDetails></CourseDetails>
                 },
                 {
+                    path: 'courses/payment/:id',
+                    element:<PaymentForm></PaymentForm>
+                },
+                {
                     path:'/teacherForm',
                     element:<TeacherForm></TeacherForm>
                 }
@@ -53,8 +62,8 @@ const Router = createBrowserRouter(
             children:[
                 // Admin Routes
                 {
-                    path:'/dashboard/adminProfile',
-                    element:<AdminProfiile></AdminProfiile>
+                    path:'/dashboard/profile',
+                    element:<Profile></Profile>
                 },
                 {
                     path:'/dashboard/allUsers',
@@ -81,7 +90,27 @@ const Router = createBrowserRouter(
                     path:'/dashboard/teacherClass',
                     element:<MyTeacherClass></MyTeacherClass>
 
-                }
+                },
+                {
+
+                    path:'/dashboard/result',
+                    element:<ResultFetcher></ResultFetcher>
+
+                },
+                // Student Routes
+                {
+
+                    path:'/dashboard/enrollClass',
+                    element:<EnrollCourse></EnrollCourse>
+
+                },
+                {
+
+                    path:'/dashboard/enrollDetails/:id',
+                    element:<EnrollDetails></EnrollDetails>
+
+                },
+
             ]
         }
     ]
