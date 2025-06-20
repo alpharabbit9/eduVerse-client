@@ -38,6 +38,12 @@ const Navbar = () => {
         <li>
             <NavLink to={'/courses'}><a>Courses</a></NavLink>
         </li>
+        <li>
+            <NavLink to={'/About'}><a>About</a></NavLink>
+        </li>
+        <li>
+            <NavLink to={'/Contact'}><a>Contact</a></NavLink>
+        </li>
     </>
     return (
         <div className="navbar bg-base-100 shadow-sm md:px-12 md:w-10/12 mx-auto rounded-3xl">

@@ -10,7 +10,7 @@ const Courses = () => {
 
 
     useEffect(() => {
-        axios.get('http://localhost:5000/confirmedCourse')
+        axios.get('https://edu-verse-server-site-rifat-ahmeds-projects-07d383b5.vercel.app/confirmedCourse')
             .then(res => {
                 console.log(res.data)
                 setCourses(res.data)

@@ -3,7 +3,7 @@ import axios from "axios";
 
 const axiosSecure = axios.create({
 
-    baseURL: 'http://localhost:5000',
+    baseURL: 'https://edu-verse-server-site-rifat-ahmeds-projects-07d383b5.vercel.app',
 })
 
 const UseAxiosSecure = () => {

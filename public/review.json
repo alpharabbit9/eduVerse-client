@@ -1,0 +1,38 @@
+[
+  {
+    "feedback": "This class was amazing! The instructor made even the toughest topics easy to understand.",
+    "name": "Hamim Rahman",
+    "image": "https://randomuser.me/api/portraits/men/1.jpg",
+    "title": "Advanced JavaScript"
+  },
+  {
+    "feedback": "I loved the hands-on projects. It really helped solidify what we learned.",
+    "name": "Tanim Hossain",
+    "image": "https://randomuser.me/api/portraits/men/2.jpg",
+    "title": "Full Stack Web Development"
+  },
+  {
+    "feedback": "The course was very well-structured. Perfect for beginners like me!",
+    "name": "Mira Tabassum",
+    "image": "https://randomuser.me/api/portraits/women/1.jpg",
+    "title": "HTML & CSS Basics"
+  },
+  {
+    "feedback": "Great pacing and detailed explanations. Highly recommend!",
+    "name": "Rafiul Islam",
+    "image": "https://randomuser.me/api/portraits/men/3.jpg",
+    "title": "React for Beginners"
+  },
+  {
+    "feedback": "Very practical and up-to-date content. The instructor was very supportive.",
+    "name": "Nusrat Jahan",
+    "image": "https://randomuser.me/api/portraits/women/2.jpg",
+    "title": "Python Programming Fundamentals"
+  },
+  {
+    "feedback": "One of the best online courses I've taken. The exercises were fun and engaging.",
+    "name": "Asif Mahmud",
+    "image": "https://randomuser.me/api/portraits/men/4.jpg",
+    "title": "Data Structures & Algorithms"
+  }
+]

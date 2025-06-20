@@ -18,6 +18,7 @@ import PaymentForm from "../Payment/PaymentForm";
 import EnrollCourse from "../Pages/Dashboard/Student/My Enroll Class/EnrollCourse";
 import EnrollDetails from "../Pages/Dashboard/Student/Enorll Class  Details/EnrollDetails";
 import Profile from "../Pages/Dashboard/Profile/Profiile";
+import PrivateRoute from "./PrivateRoute";
 
 
 const Router = createBrowserRouter(
@@ -36,15 +37,21 @@ const Router = createBrowserRouter(
                 },
                 {
                     path: 'courses/:id',
-                    element: <CourseDetails></CourseDetails>
+                    element: <PrivateRoute>
+                        <CourseDetails></CourseDetails>
+                    </PrivateRoute>
                 },
                 {
                     path: 'courses/payment/:id',
-                    element:<PaymentForm></PaymentForm>
+                    element: <PrivateRoute>
+                        <PaymentForm></PaymentForm>
+                    </PrivateRoute>
                 },
                 {
-                    path:'/teacherForm',
-                    element:<TeacherForm></TeacherForm>
+                    path: '/teacherForm',
+                    element: <PrivateRoute>
+                        <TeacherForm></TeacherForm>
+                    </PrivateRoute>
                 }
             ]
         },
@@ -58,56 +65,58 @@ const Router = createBrowserRouter(
         },
         {
             path: 'dashboard',
-            element:<Dashboard></Dashboard>,
-            children:[
+            element: <PrivateRoute>
+                <Dashboard></Dashboard>
+            </PrivateRoute>,
+            children: [
                 // Admin Routes
                 {
-                    path:'/dashboard/profile',
-                    element:<Profile></Profile>
+                    path: '/dashboard/profile',
+                    element: <Profile></Profile>
                 },
                 {
-                    path:'/dashboard/allUsers',
-                    element:<AllUsers></AllUsers>
+                    path: '/dashboard/allUsers',
+                    element: <AllUsers></AllUsers>
                 },
                 {
-                    path:'/dashboard/teacherReq',
-                    element:<TeacherReq></TeacherReq>
+                    path: '/dashboard/teacherReq',
+                    element: <TeacherReq></TeacherReq>
                 },
                 {
-                    path:'/dashboard/allCourse',
-                    element:<AllClass></AllClass>
+                    path: '/dashboard/allCourse',
+                    element: <AllClass></AllClass>
                 },
 
                 // Teacher Routes
                 {
 
-                    path:'/dashboard/addClass',
-                    element:<AddClass></AddClass>
+                    path: '/dashboard/addClass',
+                    element: <AddClass></AddClass>
 
                 },
                 {
 
-                    path:'/dashboard/teacherClass',
-                    element:<MyTeacherClass></MyTeacherClass>
+                    path: '/dashboard/teacherClass',
+                    element: <MyTeacherClass></MyTeacherClass>
 
                 },
                 {
 
-                    path:'/dashboard/result',
-                    element:<ResultFetcher></ResultFetcher>
+                    path: '/dashboard/result',
+                    element: <ResultFetcher></ResultFetcher>
 
                 },
                 // Student Routes
                 {
 
-                    path:'/dashboard/enrollClass',
-                    element:<EnrollCourse></EnrollCourse>
+                    path: '/dashboard/enrollClass',
+                    element: <EnrollCourse></EnrollCourse>
 
                 },
                 {
 
-                    path:'/dashboard/enrollDetails/:id',
-                    element:<EnrollDetails></EnrollDetails>
+                    path: '/dashboard/enrollDetails/:id',
+                    element: <EnrollDetails></EnrollDetails>
 
                 },
 

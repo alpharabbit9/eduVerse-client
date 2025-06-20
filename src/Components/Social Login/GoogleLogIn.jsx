@@ -30,7 +30,7 @@ const GoogleLogIn = () => {
 
                 }
 
-                axios.post('http://localhost:5000/users', userData)
+                axios.post('https://edu-verse-server-site-rifat-ahmeds-projects-07d383b5.vercel.app/users', userData)
                     .then(results => {
                         console.log(results.data)
                     })

@@ -20,7 +20,7 @@ const PaymentForm = () => {
     const axiosSecure = UseAxiosSecure()
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/confirmedCourse/id/${id}`)
+        axios.get(`https://edu-verse-server-site-rifat-ahmeds-projects-07d383b5.vercel.app/confirmedCourse/id/${id}`)
             .then(res => {
                 setCourse(res.data);
                 setLoading(false);
