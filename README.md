@@ -1,12 +1,44 @@
-# React + Vite
+# 🎓 Eduverse – Learn. Teach. Evolve.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Eduverse** is a modern web platform designed to connect students, tutors, and educational institutions in a streamlined environment. It allows students to explore and purchase courses, while tutors can publish, manage, and sell their educational content.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+👉 [View Live Website](https://your-live-link-here.com)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📚 Features
+
+- 🔐 **Authentication** with secure login and signup
+- 🧑‍🏫 **Instructor Dashboard** for publishing and managing courses
+- 🧑‍🎓 **Student Interface** for browsing, purchasing, and accessing courses
+- 💳 **Integrated Payment Gateway** (optional if implemented)
+- 🌐 **Responsive Design** (Mobile + Desktop)
+- ⚙️ Admin controls for managing users and content (optional)
+- 🔎 Course filtering, search, and category-based browsing
+
+---
+
+## 🛠️ Tech Stack
+
+**Frontend:**
+- React.js
+- Tailwind CSS / DaisyUI
+- React Router
+- Axios
+
+**Backend:**
+- Node.js
+- Express.js
+- MongoDB (Mongoose)
+
+**Other Tools:**
+- Firebase (for Auth, if used)
+- JWT for secure routes
+- Stripe/SSLCommerz (if payment is integrated)
+
+---
+
+## 📁 Folder Structure
+
